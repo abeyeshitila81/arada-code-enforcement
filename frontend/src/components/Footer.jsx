@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import aradaLogo from '../assets/logo.jpg';
 
+import developerPhoto from '../assets/developer.jpg';
+
 const Footer = () => {
   return (
     <footer className="bg-darkFooter pt-16 pb-8 border-t-[6px] border-primary">
@@ -68,9 +70,20 @@ const Footer = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-700 text-sm text-gray-400">
           <p>&copy; {new Date().getFullYear()} Arada Sub-City Administration. All rights reserved.</p>
-          <p className="mt-2 md:mt-0">
-            Developed by <span className="text-white font-medium">Alemu Samuel</span>
-          </p>
+          <div className="mt-4 md:mt-0 flex items-center gap-3 bg-white/5 py-2 px-4 rounded-full border border-white/10 group hover:border-primary/50 transition-all">
+            <div className="relative">
+              <img 
+                src={developerPhoto} 
+                alt="Developer" 
+                className="w-10 h-10 rounded-full object-cover border-2 border-white/20 group-hover:border-primary transition-colors"
+              />
+              <span className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-[#1a1c1e] rounded-full"></span>
+            </div>
+            <div>
+              <span className="block text-[10px] uppercase tracking-widest text-gray-500 font-bold">Developed by</span>
+              <span className="text-white font-semibold text-sm group-hover:text-primary transition-colors tracking-wide">Alemu Samuel</span>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
