@@ -10,6 +10,7 @@ import AboutContact from './components/AboutContact';
 import Services from './components/Services';
 import News from './components/News';
 import Documents from './components/Documents';
+import Hero from './components/Hero';
 import AnnouncementTicker from './components/AnnouncementTicker';
 import Footer from './components/Footer';
 
