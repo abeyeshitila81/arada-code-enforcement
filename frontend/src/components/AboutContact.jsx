@@ -25,7 +25,7 @@ const AboutContact = () => {
           <span className="font-semibold text-primary mr-2">Wanofi📞Phone num:</span> (+251)935071709 
         </div>
         <div className="flex items-center mb-4">
-          <span className="font-semibold text-primary mr-2">📩Email:</span> info@arada-enforcement.com
+          <span className="font-semibold text-primary mr-2">📩Email:</span> info@arada-code-enforcement.com.et
         </div>
         <div className="flex items-start mb-4">
           <span className="font-semibold text-primary mr-2">Address:</span> 

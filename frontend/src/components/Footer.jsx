@@ -60,7 +60,7 @@ const Footer = () => {
                 <span className="text-primary text-lg mt-0.5">📧</span>
                 <div>
                   <span className="block text-white font-medium">Email</span>
-                  <a href="mailto:info@arada-enforcement.com" className="hover:text-primary transition-colors">info@arada-enforcement.com</a>
+                  <a href="mailto:info@arada-code-enforcement.com.et" className="hover:text-primary transition-colors">info@arada-code-enforcement.com.et</a>
                 </div>
               </li>
             </ul>

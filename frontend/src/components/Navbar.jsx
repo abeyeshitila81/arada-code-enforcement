@@ -33,8 +33,8 @@ const Navbar = () => {
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 border-b border-transparent ${
       scrolled
-        ? 'bg-white/90 backdrop-blur-md shadow-md py-3'
-        : 'bg-white py-5 shadow-sm'
+        ? 'bg-white/90 backdrop-blur-md shadow-md py-3 top-[40px]'
+        : 'bg-white py-5 shadow-sm top-[40px]'
     }`}>
       <div className="max-w-[1200px] mx-auto px-5 flex justify-between items-center">
 
@@ -53,15 +53,26 @@ const Navbar = () => {
 
         {/* Desktop Links */}
         <div className="hidden lg:flex space-x-4 xl:space-x-6 items-center">
-          {navLinks.map((link) => (
-            <Link
-              key={link.to}
-              to={link.to}
-              className="text-textDark font-medium hover:text-primary transition-colors hover:scale-105 active:scale-95 transform text-sm"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isHashLink = link.to.includes('#');
+            return isHashLink ? (
+              <a
+                key={link.to}
+                href={link.to}
+                className="text-textDark font-medium hover:text-primary transition-colors hover:scale-105 active:scale-95 transform text-sm"
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link
+                key={link.to}
+                to={link.to}
+                className="text-textDark font-medium hover:text-primary transition-colors hover:scale-105 active:scale-95 transform text-sm"
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </div>
 
         {/* Desktop CTA */}
@@ -97,15 +108,27 @@ const Navbar = () => {
       {/* Mobile Dropdown Menu */}
       <div className={`lg:hidden overflow-hidden transition-all duration-300 ${menuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
         <div className="bg-white border-t border-gray-100 px-5 py-4 flex flex-col gap-1 shadow-md">
-          {navLinks.map((link) => (
-            <Link
-              key={link.to}
-              to={link.to}
-              className="block px-4 py-2.5 rounded-xl text-textDark font-medium hover:bg-primary/5 hover:text-primary transition-colors text-sm"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isHashLink = link.to.includes('#');
+            return isHashLink ? (
+              <a
+                key={link.to}
+                href={link.to}
+                onClick={() => setMenuOpen(false)}
+                className="block px-4 py-2.5 rounded-xl text-textDark font-medium hover:bg-primary/5 hover:text-primary transition-colors text-sm"
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link
+                key={link.to}
+                to={link.to}
+                className="block px-4 py-2.5 rounded-xl text-textDark font-medium hover:bg-primary/5 hover:text-primary transition-colors text-sm"
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </div>
       </div>
     </nav>

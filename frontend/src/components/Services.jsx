@@ -69,13 +69,13 @@ const services = [
 ];
 
 const colorMap = {
-  blue:   { bg: 'bg-blue-50',   icon: 'bg-blue-100',   border: 'border-blue-200',   accent: 'bg-blue-500' },
-  green:  { bg: 'bg-green-50',  icon: 'bg-green-100',  border: 'border-green-200',  accent: 'bg-green-500' },
+  blue: { bg: 'bg-blue-50', icon: 'bg-blue-100', border: 'border-blue-200', accent: 'bg-blue-500' },
+  green: { bg: 'bg-green-50', icon: 'bg-green-100', border: 'border-green-200', accent: 'bg-green-500' },
   yellow: { bg: 'bg-yellow-50', icon: 'bg-yellow-100', border: 'border-yellow-200', accent: 'bg-yellow-500' },
   purple: { bg: 'bg-purple-50', icon: 'bg-purple-100', border: 'border-purple-200', accent: 'bg-purple-500' },
-  red:    { bg: 'bg-red-50',    icon: 'bg-red-100',    border: 'border-red-200',    accent: 'bg-red-500' },
+  red: { bg: 'bg-red-50', icon: 'bg-red-100', border: 'border-red-200', accent: 'bg-red-500' },
   orange: { bg: 'bg-orange-50', icon: 'bg-orange-100', border: 'border-orange-200', accent: 'bg-orange-500' },
-  teal:   { bg: 'bg-teal-50',   icon: 'bg-teal-100',   border: 'border-teal-200',   accent: 'bg-teal-500' },
+  teal: { bg: 'bg-teal-50', icon: 'bg-teal-100', border: 'border-teal-200', accent: 'bg-teal-500' },
   indigo: { bg: 'bg-indigo-50', icon: 'bg-indigo-100', border: 'border-indigo-200', accent: 'bg-indigo-500' },
 };
 

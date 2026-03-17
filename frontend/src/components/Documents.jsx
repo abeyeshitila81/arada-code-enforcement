@@ -90,20 +90,17 @@ const documents = [
     color: 'indigo',
   },
 ];
-
 const categories = ['All', 'Regulation', 'Guideline', 'Report', 'Guide', 'Form'];
-
 const colorMap = {
-  red:    { badge: 'bg-red-50 text-red-700 border-red-200',    hover: 'hover:border-red-300' },
-  blue:   { badge: 'bg-blue-50 text-blue-700 border-blue-200',   hover: 'hover:border-blue-300' },
-  green:  { badge: 'bg-green-50 text-green-700 border-green-200', hover: 'hover:border-green-300' },
+  red: { badge: 'bg-red-50 text-red-700 border-red-200', hover: 'hover:border-red-300' },
+  blue: { badge: 'bg-blue-50 text-blue-700 border-blue-200', hover: 'hover:border-blue-300' },
+  green: { badge: 'bg-green-50 text-green-700 border-green-200', hover: 'hover:border-green-300' },
   yellow: { badge: 'bg-yellow-50 text-yellow-700 border-yellow-200', hover: 'hover:border-yellow-300' },
   purple: { badge: 'bg-purple-50 text-purple-700 border-purple-200', hover: 'hover:border-purple-300' },
   orange: { badge: 'bg-orange-50 text-orange-700 border-orange-200', hover: 'hover:border-orange-300' },
-  teal:   { badge: 'bg-teal-50 text-teal-700 border-teal-200',   hover: 'hover:border-teal-300' },
+  teal: { badge: 'bg-teal-50 text-teal-700 border-teal-200', hover: 'hover:border-teal-300' },
   indigo: { badge: 'bg-indigo-50 text-indigo-700 border-indigo-200', hover: 'hover:border-indigo-300' },
 };
-
 const Documents = () => {
   const [activeCategory, setActiveCategory] = useState('All');
   const [search, setSearch] = useState('');
@@ -115,7 +112,6 @@ const Documents = () => {
       doc.titleAm.includes(search);
     return matchesCategory && matchesSearch;
   });
-
   return (
     <main className="flex-grow bg-bgLight">
       {/* Hero Banner */}
@@ -125,7 +121,6 @@ const Documents = () => {
           Access public regulations, enforcement guidelines, official reports, and government forms from Arada Sub-City Code Enforcement.
         </p>
       </div>
-
       <div className="max-w-[1000px] mx-auto px-5 py-16">
         {/* Search + Filter Row */}
         <div className="flex flex-col md:flex-row gap-4 mb-8">
@@ -143,11 +138,10 @@ const Documents = () => {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all border ${
-                activeCategory === cat
-                  ? 'bg-primary text-white border-primary shadow-sm'
-                  : 'bg-white text-textLight border-gray-200 hover:border-primary hover:text-primary'
-              }`}
+              className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all border ${activeCategory === cat
+                ? 'bg-primary text-white border-primary shadow-sm'
+                : 'bg-white text-textLight border-gray-200 hover:border-primary hover:text-primary'
+                }`}
             >
               {cat}
             </button>
@@ -188,7 +182,6 @@ const Documents = () => {
               </div>
             );
           })}
-
           {filtered.length === 0 && (
             <div className="col-span-2 text-center py-16 text-textLight">
               <p className="text-5xl mb-4">📂</p>
@@ -196,7 +189,6 @@ const Documents = () => {
             </div>
           )}
         </div>
-
         {/* Info Notice */}
         <div className="mt-10 bg-blue-50 border border-blue-100 rounded-xl p-5 text-sm text-blue-800 flex gap-3 items-start">
           <span className="text-xl flex-shrink-0">ℹ️</span>
@@ -209,5 +201,4 @@ const Documents = () => {
     </main>
   );
 };
-
 export default Documents;

@@ -10,12 +10,14 @@ import AboutContact from './components/AboutContact';
 import Services from './components/Services';
 import News from './components/News';
 import Documents from './components/Documents';
+import AnnouncementTicker from './components/AnnouncementTicker';
 import Footer from './components/Footer';
 
 // A simple Home wrapper component for the homepage content
 const Home = () => (
   <>
     <Header />
+    <Hero />
     <main id="about" className="py-16 flex-grow">
       <div className="max-w-[1200px] mx-auto px-5">
         <CardsSection />
@@ -25,12 +27,16 @@ const Home = () => (
     </main>
   </>
 );
-
 function App() {
   return (
     <div className="min-h-screen flex flex-col font-sans">
-      <Navbar />
-      
+      <div className="fixed top-0 w-full z-[60]">
+        <AnnouncementTicker />
+      </div>
+      <div className="mt-[42px]">
+        <Navbar />
+      </div>
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
