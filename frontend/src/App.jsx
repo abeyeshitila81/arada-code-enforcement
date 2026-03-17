@@ -1,0 +1,48 @@
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Navbar from './components/Navbar';
+import CardsSection from './components/CardsSection';
+import OrganizationInfo from './components/OrganizationInfo';
+import ReportForm from './components/ReportForm';
+import ComplimentForm from './components/ComplimentForm';
+import AboutContact from './components/AboutContact';
+import Services from './components/Services';
+import News from './components/News';
+import Documents from './components/Documents';
+import Footer from './components/Footer';
+
+// A simple Home wrapper component for the homepage content
+const Home = () => (
+  <>
+    <Header />
+    <main id="about" className="py-16 flex-grow">
+      <div className="max-w-[1200px] mx-auto px-5">
+        <CardsSection />
+        <OrganizationInfo />
+        <AboutContact />
+      </div>
+    </main>
+  </>
+);
+
+function App() {
+  return (
+    <div className="min-h-screen flex flex-col font-sans">
+      <Navbar />
+      
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/news" element={<News />} />
+        <Route path="/documents" element={<Documents />} />
+        <Route path="/report" element={<main className="py-16 lg:py-24 flex-grow bg-bgLight px-5"><ReportForm /></main>} />
+        <Route path="/compliment" element={<main className="py-16 lg:py-24 flex-grow bg-bgLight px-5"><ComplimentForm /></main>} />
+      </Routes>
+
+      <Footer />
+    </div>
+  );
+}
+
+export default App;

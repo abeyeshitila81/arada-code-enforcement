@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1a5d3a;
+  --color-primary-light: #2e8b57;
+  --color-secondary: #ffffff;
+  --color-accent: #e74c3c;
+  --color-bgLight: #f4f7f6;
+  --color-textDark: #333333;
+  --color-textLight: #666666;
+  --color-greenTint: #e9f2ee;
+  --color-darkFooter: #2c3e50;
+  
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  --radius-md: 12px;
+}
+
+@layer base {
+  body {
+    @apply bg-bgLight text-textDark antialiased leading-relaxed;
+  }
+}
+
+@layer components {
+  .section-divider {
+    @apply w-[60px] h-1 bg-primary mx-auto my-4 rounded-sm;
+  }
+  
+  .btn {
+    @apply inline-block bg-primary text-white py-3 px-6 rounded-full font-semibold no-underline mt-4 transition-all duration-300 transform hover:bg-primary-light hover:scale-105 border-0 cursor-pointer;
+  }
+}
