@@ -137,6 +137,25 @@ const Documents = () => {
   const [activeCategory, setActiveCategory] = useState('All');
   const [search, setSearch] = useState('');
 
+  const downloadFile = async (url, filename) => {
+    try {
+      const response = await fetch(url);
+      const blob = await response.blob();
+      const blobUrl = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = blobUrl;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(blobUrl);
+    } catch (error) {
+      console.error('Download failed:', error);
+      // Fallback to direct link if fetch fails
+      window.location.href = url;
+    }
+  };
+
   const filtered = documents.filter((doc) => {
     const matchesCategory = activeCategory === 'All' || doc.category === activeCategory;
     const matchesSearch =
@@ -185,10 +204,9 @@ const Documents = () => {
           {filtered.map((doc) => {
             const colors = colorMap[doc.color];
             return (
-              <a
+              <div
                 key={doc.id}
-                href={doc.url}
-                download={doc.url.split('/').pop()}
+                onClick={() => downloadFile(doc.url, doc.url.split('/').pop())}
                 className={`bg-white border border-gray-100 ${colors.hover} rounded-2xl p-5 flex items-start gap-4 hover:shadow-md transition-all duration-300 group cursor-pointer no-underline block`}
               >
                 <div className={`text-3xl w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 border ${colors.badge}`}>
@@ -212,7 +230,7 @@ const Documents = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                   </svg>
                 </div>
-              </a>
+              </div>
             );
           })}
           {filtered.length === 0 && (
