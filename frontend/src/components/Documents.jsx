@@ -185,10 +185,11 @@ const Documents = () => {
           {filtered.map((doc) => {
             const colors = colorMap[doc.color];
             return (
-              <div
+              <a
                 key={doc.id}
-                className={`bg-white border border-gray-100 ${colors.hover} rounded-2xl p-5 flex items-start gap-4 hover:shadow-md transition-all duration-300 group cursor-pointer`}
-                title="Document preview (PDF viewer coming soon)"
+                href={doc.url}
+                download={doc.url.split('/').pop()}
+                className={`bg-white border border-gray-100 ${colors.hover} rounded-2xl p-5 flex items-start gap-4 hover:shadow-md transition-all duration-300 group cursor-pointer no-underline block`}
               >
                 <div className={`text-3xl w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 border ${colors.badge}`}>
                   {doc.icon}
@@ -211,7 +212,7 @@ const Documents = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                   </svg>
                 </div>
-              </div>
+              </a>
             );
           })}
           {filtered.length === 0 && (
