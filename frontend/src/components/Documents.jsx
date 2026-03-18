@@ -11,7 +11,7 @@ const documents = [
     date: 'Oct 2020',
     icon: '📜',
     color: 'red',
-    url: '/documents/proclamation_180.pdf'
+    url: '/arada-code-enforcement/documents/proclamation_180.pdf'
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const documents = [
     date: 'Jan 2021',
     icon: '♻️',
     color: 'green',
-    url: '/documents/waste_policy.pdf'
+    url: '/arada-code-enforcement/documents/waste_policy.pdf'
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ const documents = [
     date: 'Mar 2025',
     icon: '🏗️',
     color: 'blue',
-    url: '/documents/construction_guideline.pdf'
+    url: '/arada-code-enforcement/documents/construction_guideline.pdf'
   },
   {
     id: 4,
@@ -47,7 +47,7 @@ const documents = [
     date: 'Dec 2023',
     icon: '📅',
     color: 'purple',
-    url: '/documents/strategic_plan.pdf'
+    url: '/arada-code-enforcement/documents/strategic_plan.pdf'
   },
   {
     id: 5,
@@ -59,7 +59,7 @@ const documents = [
     date: 'Jun 2022',
     icon: '📢',
     color: 'yellow',
-    url: '/documents/noise_standards.pdf'
+    url: '/arada-code-enforcement/documents/noise_standards.pdf'
   },
   {
     id: 6,
@@ -71,7 +71,7 @@ const documents = [
     date: 'Apr 2023',
     icon: '🏥',
     color: 'teal',
-    url: '/documents/health_directives.pdf'
+    url: '/arada-code-enforcement/documents/health_directives.pdf'
   },
   {
     id: 7,
@@ -83,7 +83,7 @@ const documents = [
     date: 'Jan 2026',
     icon: '📝',
     color: 'indigo',
-    url: '/documents/complaint_form.docx'
+    url: '/arada-code-enforcement/documents/complaint_form.docx'
   },
   {
     id: 8,
@@ -95,7 +95,7 @@ const documents = [
     date: 'Aug 2024',
     icon: '🏪',
     color: 'orange',
-    url: '/documents/vendor_guide.pdf'
+    url: '/arada-code-enforcement/documents/vendor_guide.pdf'
   },
   {
     id: 9,
@@ -107,7 +107,7 @@ const documents = [
     date: 'Feb 2025',
     icon: '✅',
     color: 'blue',
-    url: '/documents/permit_checklist.pdf'
+    url: '/arada-code-enforcement/documents/permit_checklist.pdf'
   },
   {
     id: 10,
@@ -119,7 +119,7 @@ const documents = [
     date: 'Jan 2024',
     icon: '📈',
     color: 'green',
-    url: '/documents/annual_report_2023.pdf'
+    url: '/arada-code-enforcement/documents/annual_report_2023.pdf'
   }
 ];
 const categories = ['All', 'Regulation', 'Guideline', 'Report', 'Guide', 'Form'];
